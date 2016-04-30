@@ -17,7 +17,7 @@ public class MelodyExample implements Theme {
 	@Override
 	public List<Command> getSonglines() {
 		final List<Command> songlines = new ArrayList<>();
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 3; i++) {
 			songlines.add(new Play(55));
 			songlines.add(new SampleDefault(":ambi_piano"));
 			songlines.add(ONE_BEAT);
@@ -27,14 +27,14 @@ public class MelodyExample implements Theme {
 			songlines.add(ONE_BEAT);
 			songlines.add(new SampleDefault(":ambi_swoosh"));
 			songlines.add(TWO_BEATS);
-			songlines.add(new Sleep(6));
+			songlines.add(new Sleep(4));
 		}
 		return songlines;
 	}
 
 	@Override
 	public Sleep getTotalBeats() {
-		return new Sleep((6 + 6) * 2);
+		return new Sleep((6 + 4) * 2);
 	}
 
 }

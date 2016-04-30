@@ -15,7 +15,7 @@ public class SongExample implements Song {
 
 	@Override
 	public UseBpm getBpmCommand() {
-		return new UseBpm(60);
+		return new UseBpm(80);
 	}
 
 	@Override
