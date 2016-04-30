@@ -1,11 +1,13 @@
 package com.github.klaus31.music.example;
 
+import static com.github.klaus31.command.Sleep.HALF_BEAT;
+import static com.github.klaus31.command.Sleep.QUARTER_BEAT;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import com.github.klaus31.command.Command;
 import com.github.klaus31.command.SampleDrum;
-import com.github.klaus31.command.Sleep;
 import com.github.klaus31.theme.Theme;
 
 public class DrumExample implements Theme {
@@ -17,21 +19,20 @@ public class DrumExample implements Theme {
 		final Command snare = new SampleDrum("snare_soft");
 		final Command cymbal = new SampleDrum(":drum_cymbal_closed");
 		final Command cowbell = new SampleDrum("drum_cowbell");
-		final Sleep sleep = new Sleep(0.2); // TODO woher kommen die?!
-		int i = 20; // woher kommen die
+		int i = 20;
 		while (i-- > 0) {
 			drums.add(bass);
 			drums.add(cymbal);
-			drums.add(sleep);
+			drums.add(HALF_BEAT);
 			drums.add(cymbal);
-			drums.add(sleep);
+			drums.add(HALF_BEAT);
 			drums.add(snare);
 			drums.add(cymbal);
-			drums.add(sleep);
+			drums.add(HALF_BEAT);
 			drums.add(cymbal);
-			drums.add(sleep.half());
+			drums.add(QUARTER_BEAT);
 			drums.add(cowbell);
-			drums.add(sleep.half());
+			drums.add(QUARTER_BEAT);
 		}
 		return drums;
 	}

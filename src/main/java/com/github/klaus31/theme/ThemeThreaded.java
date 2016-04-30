@@ -16,9 +16,9 @@ public class ThemeThreaded implements Theme {
 	@Override
 	public List<Command> getSonglines() {
 		final List<Command> songlines = new ArrayList<>();
-		songlines.add(Command.IN_THREAD_DO);
+		songlines.add(() -> "in_thread do");
 		songlines.addAll(theme.getSonglines());
-		songlines.add(Command.END);
+		songlines.add(() -> "end");
 		return songlines;
 	}
 }
