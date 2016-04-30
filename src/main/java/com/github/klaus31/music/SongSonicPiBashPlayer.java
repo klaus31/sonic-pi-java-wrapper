@@ -5,18 +5,19 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 
-import com.github.klaus31.theme.Theme;
+import com.github.klaus31.theme.Song;
 
 public class SongSonicPiBashPlayer implements Player {
 
 	@Override
-	public void play(final Theme theme) {
+	public void play(final Song song) {
 		try {
 			final File songfile = File.createTempFile("songfile", ".tmp");
 			System.out.println("Songfile: " + songfile.toPath());
 
 			final StringBuilder songlines = new StringBuilder();
-			theme.getSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline.getSongLine())));
+			songlines.append(String.format("%s%n", song.getBpmCommand().getSongLine()));
+			song.getSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline.getSongLine())));
 
 			FileUtils.writeStringToFile(songfile, songlines.toString());
 

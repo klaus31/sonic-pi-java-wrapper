@@ -14,8 +14,8 @@ public class ThemeB implements Theme {
 	@Override
 	public List<Command> getSonglines() {
 		final List<Command> songlines = new ArrayList<>();
-		int note = 40;
-		while (note++ < 80) {
+		int note = 55;
+		while (note++ < 65) {
 			songlines.add(new Play(note));
 			songlines.add(HALF_BEAT);
 		}

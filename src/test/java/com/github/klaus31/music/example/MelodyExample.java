@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.klaus31.command.Command;
+import com.github.klaus31.command.Play;
 import com.github.klaus31.command.SampleDefault;
 import com.github.klaus31.theme.Theme;
 
@@ -15,6 +16,7 @@ public class MelodyExample implements Theme {
 	@Override
 	public List<Command> getSonglines() {
 		final List<Command> songlines = new ArrayList<>();
+		songlines.add(new Play(55));
 		songlines.add(new SampleDefault(":ambi_piano"));
 		songlines.add(ONE_BEAT);
 		songlines.add(new SampleDefault(":ambi_swoosh"));

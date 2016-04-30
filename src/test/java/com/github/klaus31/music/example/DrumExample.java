@@ -19,7 +19,7 @@ public class DrumExample implements Theme {
 		final Command snare = new SampleDrum("snare_soft");
 		final Command cymbal = new SampleDrum(":drum_cymbal_closed");
 		final Command cowbell = new SampleDrum("drum_cowbell");
-		int i = 20;
+		int i = 10;
 		while (i-- > 0) {
 			drums.add(bass);
 			drums.add(cymbal);
