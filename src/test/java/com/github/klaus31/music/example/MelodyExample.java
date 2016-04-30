@@ -23,6 +23,7 @@ public class MelodyExample implements Theme {
 			songlines.add(ONE_BEAT);
 			songlines.add(new SampleDefault(":ambi_swoosh"));
 			songlines.add(TWO_BEATS);
+			songlines.add(new Play(55));
 			songlines.add(new SampleDefault(":ambi_piano"));
 			songlines.add(ONE_BEAT);
 			songlines.add(new SampleDefault(":ambi_swoosh"));
