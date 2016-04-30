@@ -10,7 +10,7 @@ public class Sleep implements Command {
 	public static final Sleep FOUR_BEATS = new Sleep(4);
 	private final double beats;
 
-	private Sleep(final double beats) {
+	public Sleep(final double beats) {
 		this.beats = beats;
 	}
 

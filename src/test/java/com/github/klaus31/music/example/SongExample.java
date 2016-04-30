@@ -22,7 +22,10 @@ public class SongExample implements Song {
 	public List<Command> getSonglines() {
 		final List<Command> songlines = new ArrayList<>();
 		songlines.addAll(themeA.getSonglines());
+		songlines.add(themeA.getTotalBeats());
 		songlines.addAll(themeB.getSonglines());
+		songlines.add(themeB.getTotalBeats());
 		return songlines;
 	}
+
 }

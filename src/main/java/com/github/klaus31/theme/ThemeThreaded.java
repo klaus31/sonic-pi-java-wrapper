@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.klaus31.command.Command;
+import com.github.klaus31.command.Sleep;
 
 public class ThemeThreaded implements Theme {
 
@@ -20,5 +21,10 @@ public class ThemeThreaded implements Theme {
 		songlines.addAll(theme.getSonglines());
 		songlines.add(() -> "end");
 		return songlines;
+	}
+
+	@Override
+	public Sleep getTotalBeats() {
+		return theme.getTotalBeats();
 	}
 }

@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.github.klaus31.command.Command;
 import com.github.klaus31.command.Play;
+import com.github.klaus31.command.Sleep;
 import com.github.klaus31.theme.Theme;
 
 public class ThemeB implements Theme {
@@ -20,6 +21,11 @@ public class ThemeB implements Theme {
 			songlines.add(HALF_BEAT);
 		}
 		return songlines;
+	}
+
+	@Override
+	public Sleep getTotalBeats() {
+		return new Sleep(5);
 	}
 
 }

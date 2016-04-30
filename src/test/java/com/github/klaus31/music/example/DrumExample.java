@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.github.klaus31.command.Command;
 import com.github.klaus31.command.SampleDrum;
+import com.github.klaus31.command.Sleep;
 import com.github.klaus31.theme.Theme;
 
 public class DrumExample implements Theme {
@@ -35,6 +36,11 @@ public class DrumExample implements Theme {
 			drums.add(QUARTER_BEAT);
 		}
 		return drums;
+	}
+
+	@Override
+	public Sleep getTotalBeats() {
+		return new Sleep(20);
 	}
 
 }
