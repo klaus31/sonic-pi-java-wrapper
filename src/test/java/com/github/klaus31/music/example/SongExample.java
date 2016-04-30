@@ -25,6 +25,7 @@ public class SongExample implements Song {
 		songlines.add(themeA.getTotalBeats());
 		songlines.addAll(themeB.getSonglines());
 		songlines.add(themeB.getTotalBeats());
+		songlines.addAll(themeA.getSonglines());
 		return songlines;
 	}
 
