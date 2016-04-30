@@ -1,4 +1,4 @@
-package com.github.klaus31.music;
+package com.github.klaus31.music.song;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,9 +6,11 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
+import com.github.klaus31.music.command.Command;
+
 public abstract class SongSonicPiBash implements Song {
 
-	public abstract List<String> getSonglines();
+	public abstract List<Command> getSonglines();
 
 	@Override
 	public void play() {
@@ -17,7 +19,7 @@ public abstract class SongSonicPiBash implements Song {
 			System.out.println("Songfile: " + songfile.toPath());
 
 			StringBuilder songlines = new StringBuilder();
-			getSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline)));
+			getSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline.getSongLine())));
 
 			FileUtils.writeStringToFile(songfile, songlines.toString());
 

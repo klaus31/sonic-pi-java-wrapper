@@ -1,4 +1,4 @@
-package com.github.klaus31.music;
+package com.github.klaus31.music.song;
 
 public interface Song {
 
