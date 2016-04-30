@@ -3,10 +3,9 @@ package com.github.klaus31.music.example;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.klaus31.music.command.Command;
-import com.github.klaus31.music.command.ThreadedTheme;
-import com.github.klaus31.music.theme.Song;
-import com.github.klaus31.music.theme.Theme;
+import com.github.klaus31.command.Command;
+import com.github.klaus31.theme.Song;
+import com.github.klaus31.theme.Theme;
 
 public class SongExample implements Song {
 
@@ -16,8 +15,8 @@ public class SongExample implements Song {
 	@Override
 	public List<Command> getSonglines() {
 		final List<Command> songlines = new ArrayList<>();
-		songlines.addAll(new ThreadedTheme(themeA).getSonglines());
-		songlines.addAll(new ThreadedTheme(themeB).getSonglines());
+		songlines.addAll(themeA.getSonglines());
+		songlines.addAll(themeB.getSonglines());
 		return songlines;
 	}
 }

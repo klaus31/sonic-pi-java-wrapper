@@ -1,4 +1,4 @@
-package com.github.klaus31.music.command;
+package com.github.klaus31.command;
 
 public interface Command {
 
@@ -6,5 +6,4 @@ public interface Command {
 	Command END = () -> "end";
 
 	String getSongLine();
-
 }

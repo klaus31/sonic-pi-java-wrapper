@@ -1,4 +1,4 @@
-package com.github.klaus31.music.command;
+package com.github.klaus31.command;
 
 public class Play implements Command {
 
