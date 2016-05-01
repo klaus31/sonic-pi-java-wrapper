@@ -1,5 +1,7 @@
 package com.github.klaus31.command;
 
+import com.github.klaus31.music.Songline;
+
 public class UseBpm implements Command {
 
 	private final int number;
@@ -9,7 +11,7 @@ public class UseBpm implements Command {
 	}
 
 	@Override
-	public String getSongLine() {
-		return String.format("use_bpm %d", number);
+	public Songline getSongline() {
+		return Songline.create(String.format("use_bpm %d", number));
 	}
 }

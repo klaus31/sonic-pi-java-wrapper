@@ -1,5 +1,7 @@
 package com.github.klaus31.command;
 
+import com.github.klaus31.music.Songline;
+
 public class Sleep implements Command {
 
 	public static final Sleep QUARTER_BEAT = new Sleep(1D / 4D);
@@ -15,8 +17,8 @@ public class Sleep implements Command {
 	}
 
 	@Override
-	public String getSongLine() {
-		return String.format("sleep %s", beats);
+	public Songline getSongline() {
+		return Songline.create(String.format("sleep %s", beats));
 	}
 
 }
