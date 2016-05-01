@@ -1,7 +1,6 @@
 package com.github.klaus31.music.demo;
 
 import com.github.klaus31.command.UseBpm;
-import com.github.klaus31.music.Songline;
 import com.github.klaus31.music.SonglineList;
 import com.github.klaus31.theme.Song;
 import com.github.klaus31.theme.Theme;
@@ -14,7 +13,7 @@ public class SongDemo implements Song {
 
 	@Override
 	public UseBpm getBpmCommand() {
-		return new UseBpm(40);
+		return new UseBpm(80);
 	}
 
 	@Override
@@ -24,7 +23,6 @@ public class SongDemo implements Song {
 		songlines.add(themeB);
 		songlines.add(themeA);
 		songlines.add(themeC);
-		songlines.add(Songline.create("use_octave 0.5"));
 		songlines.add(themeA);
 		return songlines;
 	}

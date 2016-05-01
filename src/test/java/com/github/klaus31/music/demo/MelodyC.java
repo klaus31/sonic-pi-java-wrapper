@@ -2,6 +2,9 @@ package com.github.klaus31.music.demo;
 
 import com.github.klaus31.command.PlayNoteFactory;
 import com.github.klaus31.command.Sleep;
+import com.github.klaus31.command.params.Amp;
+import com.github.klaus31.command.params.Pan;
+import com.github.klaus31.command.params.PlayParamsCtrl;
 import com.github.klaus31.music.SonglineList;
 import com.github.klaus31.theme.Theme;
 
@@ -11,8 +14,13 @@ public class MelodyC implements Theme {
 
 	@Override
 	public SonglineList getSonglines() {
-		final PlayNoteFactory bassline = new PlayNoteFactory("C3", "major");
-		final PlayNoteFactory upperline = new PlayNoteFactory("G5", "major");
+		final PlayParamsCtrl ctrlBassline = new PlayParamsCtrl();
+		ctrlBassline.setPan(Pan.LEFT_HALF);
+		final PlayParamsCtrl ctrlUpperline = new PlayParamsCtrl();
+		ctrlUpperline.setPan(Pan.RIGHT_HALF);
+		ctrlUpperline.setAmp(Amp.QUIET);
+		final PlayNoteFactory bassline = new PlayNoteFactory("C3", "major", ctrlBassline);
+		final PlayNoteFactory upperline = new PlayNoteFactory("G5", "major", ctrlUpperline);
 		songlines.add(bassline.createPlay());
 		songlines.add(upperline.createPlay(0));
 		songlines.add(Sleep.QUARTER_BEAT);

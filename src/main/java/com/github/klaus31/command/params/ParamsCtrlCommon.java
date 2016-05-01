@@ -10,6 +10,11 @@ public class ParamsCtrlCommon {
 		return this;
 	}
 
+	public ParamsCtrlCommon setAmp(final Amp newAmp) {
+		this.amp = newAmp;
+		return this;
+	}
+
 	public ParamsCtrlCommon setPan(final Pan newPan) {
 		this.pan = newPan;
 		return this;
