@@ -14,12 +14,16 @@ public class PlayNoteFactory {
 		this.ctrl = ctrl;
 	}
 
-	public Play createPlay() {
-		return new Play(String.format("scale(%s, %s)", tonic, name), ctrl);
-	}
-
 	public Play createPlay(final int number) {
 		return new Play(String.format("scale(%s, %s)[%d]", tonic, name, number % 9), ctrl);
+	}
+
+	public Play createPlayChord(final int number) {
+		return createPlayChord(number, name);
+	}
+
+	public Play createPlayChord(final int number, final String name) {
+		return new Play(String.format("chord(scale(%s, %s)[%d], %s)", tonic, name, number % 9, colonize(name)), ctrl);
 	}
 
 }
