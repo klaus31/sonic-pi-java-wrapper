@@ -1,10 +1,8 @@
 package com.github.klaus31.theme;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.github.klaus31.command.Sleep;
 import com.github.klaus31.music.Songline;
+import com.github.klaus31.music.SonglineList;
 
 public class ThemeThreaded implements Theme {
 
@@ -15,8 +13,8 @@ public class ThemeThreaded implements Theme {
 	}
 
 	@Override
-	public List<Songline> getSonglines() {
-		final List<Songline> songlines = new ArrayList<>();
+	public SonglineList getSonglines() {
+		final SonglineList songlines = new SonglineList();
 		songlines.add(Songline.create("in_thread do"));
 		songlines.addAll(theme.getSonglines());
 		songlines.add(Songline.create("end"));

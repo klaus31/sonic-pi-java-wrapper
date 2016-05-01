@@ -31,12 +31,13 @@ public class Play implements Command {
 		return Songline.create("play " + note + ctrl.toApplyString());
 	}
 
-	public void setNote(final int note) {
-		setNote(note + "");
+	public Play setNote(final int note) {
+		return setNote(note + "");
 	}
 
-	public void setNote(final String note) {
+	public Play setNote(final String note) {
 		this.note = note;
+		return this;
 	}
 
 }
