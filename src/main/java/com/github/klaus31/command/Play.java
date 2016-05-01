@@ -1,20 +1,24 @@
 package com.github.klaus31.command;
 
+import com.github.klaus31.command.params.Amp;
+
 public class Play implements Command {
 
-	private String note;
+	private final String note;
+	private final Amp amp;
 
-	public Play(int note) {
-		this(note + "");
+	public Play(final int note) {
+		this(note + "", Amp.DEFAULT);
 	}
 
-	public Play(String note) {
+	public Play(final String note, final Amp amp) {
 		this.note = note;
+		this.amp = amp;
 	}
 
 	@Override
 	public String getSongLine() {
-		return String.format("play %s", note);
+		return String.format("play %s", note) + amp.toApplyString();
 	}
 
 }
