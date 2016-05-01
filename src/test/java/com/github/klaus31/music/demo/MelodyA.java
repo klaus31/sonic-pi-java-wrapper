@@ -1,4 +1,4 @@
-package com.github.klaus31.music.example;
+package com.github.klaus31.music.demo;
 
 import static com.github.klaus31.command.Sleep.ONE_BEAT;
 import static com.github.klaus31.command.Sleep.TWO_BEATS;
@@ -9,7 +9,7 @@ import com.github.klaus31.command.Sleep;
 import com.github.klaus31.music.SonglineList;
 import com.github.klaus31.theme.Theme;
 
-public class MelodyAExample implements Theme {
+public class MelodyA implements Theme {
 
 	@Override
 	public SonglineList getSonglines() {

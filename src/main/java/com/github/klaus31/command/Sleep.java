@@ -16,6 +16,10 @@ public class Sleep implements Command {
 		this.beats = beats;
 	}
 
+	public double getBeats() {
+		return beats;
+	}
+
 	@Override
 	public Songline getSongline() {
 		return Songline.create(String.format("sleep %s", beats));

@@ -1,4 +1,4 @@
-package com.github.klaus31.music.example;
+package com.github.klaus31.music.demo;
 
 import static com.github.klaus31.command.Sleep.HALF_BEAT;
 
@@ -8,7 +8,7 @@ import com.github.klaus31.command.params.Pan;
 import com.github.klaus31.music.SonglineList;
 import com.github.klaus31.theme.Theme;
 
-public class MelodyBExample implements Theme {
+public class MelodyB implements Theme {
 
 	@Override
 	public SonglineList getSonglines() {
