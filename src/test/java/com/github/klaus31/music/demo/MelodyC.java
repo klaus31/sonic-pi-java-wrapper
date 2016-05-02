@@ -1,12 +1,14 @@
 package com.github.klaus31.music.demo;
 
-import com.github.klaus31.command.PlayNoteFactory;
-import com.github.klaus31.command.Sleep;
-import com.github.klaus31.command.params.Amp;
-import com.github.klaus31.command.params.Pan;
-import com.github.klaus31.command.params.PlayParamsCtrl;
+import static com.github.klaus31.music.Synth.MOD_SINE;
+
 import com.github.klaus31.music.SonglineList;
-import com.github.klaus31.theme.Theme;
+import com.github.klaus31.music.command.PlayNoteFactory;
+import com.github.klaus31.music.command.Sleep;
+import com.github.klaus31.music.command.params.Amp;
+import com.github.klaus31.music.command.params.Pan;
+import com.github.klaus31.music.command.params.PlayParamsCtrl;
+import com.github.klaus31.music.theme.Theme;
 
 public class MelodyC implements Theme {
 
@@ -20,14 +22,14 @@ public class MelodyC implements Theme {
 		ctrlUpperline.setPan(Pan.RIGHT_HALF).setAmp(Amp.QUIET);
 		final PlayNoteFactory bassline = new PlayNoteFactory("G2", "major", ctrlBassline);
 		final PlayNoteFactory upperline = new PlayNoteFactory("G5", "major", ctrlUpperline);
-		songlines.add(bassline.createPlayChord(0));
+		songlines.add(bassline.createPlayChord(0).setSynth(MOD_SINE));
 		songlines.add(upperline.createPlay(0));
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(upperline.createPlay(0));
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(upperline.createPlay(3));
 		songlines.add(Sleep.HALF_BEAT);
-		songlines.add(bassline.createPlayChord(1));
+		songlines.add(bassline.createPlayChord(1).setSynth(MOD_SINE));
 		songlines.add(upperline.createPlay(1));
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(upperline.createPlay(1));
@@ -40,17 +42,17 @@ public class MelodyC implements Theme {
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(upperline.createPlay(3));
 		songlines.add(Sleep.QUARTER_BEAT);
-		songlines.add(bassline.createPlayChord(4));
+		songlines.add(bassline.createPlayChord(4).setSynth(MOD_SINE));
 		songlines.add(upperline.createPlay(4));
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(upperline.createPlay(6));
 		songlines.add(Sleep.HALF_BEAT);
-		songlines.add(bassline.createPlayChord(4));
+		songlines.add(bassline.createPlayChord(4).setSynth(MOD_SINE));
 		songlines.add(upperline.createPlay(4));
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(upperline.createPlay(2));
 		songlines.add(Sleep.ONE_BEAT);
-		songlines.add(bassline.createPlayChord(0));
+		songlines.add(bassline.createPlayChord(0).setSynth(MOD_SINE));
 		songlines.add(upperline.createPlayChord(0));
 		songlines.add(Sleep.ONE_BEAT);
 		songlines.add(upperline.createPlay(0));
@@ -58,12 +60,12 @@ public class MelodyC implements Theme {
 		songlines.add(upperline.createPlay(3));
 		songlines.add(Sleep.HALF_BEAT);
 		songlines.add(Sleep.QUARTER_BEAT);
-		songlines.add(bassline.createPlayChord(2));
+		songlines.add(bassline.createPlayChord(2).setSynth(MOD_SINE));
 		songlines.add(upperline.createPlay(2));
 		songlines.add(Sleep.HALF_BEAT);
 		songlines.add(upperline.createPlay(1));
 		songlines.add(Sleep.TWO_BEATS);
-		songlines.add(bassline.createPlayChord(0));
+		songlines.add(bassline.createPlayChord(0).setSynth(MOD_SINE));
 		return songlines;
 	}
 

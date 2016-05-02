@@ -3,7 +3,7 @@ package com.github.klaus31.music;
 import java.io.IOException;
 
 import com.github.klaus31.music.demo.SongDemo;
-import com.github.klaus31.theme.Song;
+import com.github.klaus31.music.theme.Song;
 
 public class Main {
 

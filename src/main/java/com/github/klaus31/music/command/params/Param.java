@@ -1,4 +1,4 @@
-package com.github.klaus31.command.params;
+package com.github.klaus31.music.command.params;
 
 public interface Param {
 

@@ -1,9 +1,9 @@
 package com.github.klaus31.music.demo;
 
-import com.github.klaus31.command.UseBpm;
 import com.github.klaus31.music.SonglineList;
-import com.github.klaus31.theme.Song;
-import com.github.klaus31.theme.Theme;
+import com.github.klaus31.music.command.UseBpm;
+import com.github.klaus31.music.theme.Song;
+import com.github.klaus31.music.theme.Theme;
 
 public class SongDemo implements Song {
 

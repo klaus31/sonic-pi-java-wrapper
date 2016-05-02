@@ -2,10 +2,10 @@ package com.github.klaus31.music;
 
 import java.util.ArrayList;
 
-import com.github.klaus31.command.Command;
-import com.github.klaus31.command.Sleep;
-import com.github.klaus31.theme.Theme;
-import com.github.klaus31.theme.ThemeThreaded;
+import com.github.klaus31.music.command.Command;
+import com.github.klaus31.music.command.Sleep;
+import com.github.klaus31.music.theme.Theme;
+import com.github.klaus31.music.theme.ThemeThreaded;
 
 public class SonglineList extends ArrayList<Songline> {
 	private static final long serialVersionUID = 1L;

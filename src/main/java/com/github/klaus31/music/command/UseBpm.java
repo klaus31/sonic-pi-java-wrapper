@@ -1,4 +1,4 @@
-package com.github.klaus31.command;
+package com.github.klaus31.music.command;
 
 import com.github.klaus31.music.Songline;
 

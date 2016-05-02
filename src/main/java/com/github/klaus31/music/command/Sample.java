@@ -1,9 +1,9 @@
-package com.github.klaus31.command;
+package com.github.klaus31.music.command;
 
-import static com.github.klaus31.command.Rubyalizer.colonize;
+import static com.github.klaus31.music.util.Rubyalizer.colonize;
 
-import com.github.klaus31.command.params.SampleParamsCtrl;
 import com.github.klaus31.music.Songline;
+import com.github.klaus31.music.command.params.SampleParamsCtrl;
 
 public class Sample implements Command {
 

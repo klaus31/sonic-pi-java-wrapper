@@ -1,8 +1,8 @@
-package com.github.klaus31.command;
+package com.github.klaus31.music.command;
 
-import static com.github.klaus31.command.Rubyalizer.colonize;
+import static com.github.klaus31.music.util.Rubyalizer.colonize;
 
-import com.github.klaus31.command.params.PlayParamsCtrl;
+import com.github.klaus31.music.command.params.PlayParamsCtrl;
 
 public class PlayNoteFactory {
 	private final String tonic, name;

@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 
-import com.github.klaus31.theme.Song;
+import com.github.klaus31.music.theme.Song;
 
 public class SongSonicPiBashPlayer implements Player {
 

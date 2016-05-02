@@ -1,9 +1,9 @@
 package com.github.klaus31.music.demo;
 
-import com.github.klaus31.command.Sleep;
 import com.github.klaus31.music.SonglineList;
-import com.github.klaus31.theme.Theme;
-import com.github.klaus31.theme.ThemeThreaded;
+import com.github.klaus31.music.command.Sleep;
+import com.github.klaus31.music.theme.Theme;
+import com.github.klaus31.music.theme.ThemeThreaded;
 
 public class ThemeA implements Theme {
 

@@ -1,13 +1,13 @@
 package com.github.klaus31.music.demo;
 
-import static com.github.klaus31.command.Sleep.HALF_BEAT;
-import static com.github.klaus31.command.Sleep.QUARTER_BEAT;
+import static com.github.klaus31.music.command.Sleep.HALF_BEAT;
+import static com.github.klaus31.music.command.Sleep.QUARTER_BEAT;
 
-import com.github.klaus31.command.Command;
-import com.github.klaus31.command.Sample;
-import com.github.klaus31.command.Sleep;
 import com.github.klaus31.music.SonglineList;
-import com.github.klaus31.theme.Theme;
+import com.github.klaus31.music.command.Command;
+import com.github.klaus31.music.command.Sample;
+import com.github.klaus31.music.command.Sleep;
+import com.github.klaus31.music.theme.Theme;
 
 public class Drum implements Theme {
 
