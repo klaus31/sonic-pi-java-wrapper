@@ -9,7 +9,7 @@ public class PlaySynth implements Command {
 
 	private String note;
 	private ParamsCtrlCommon ctrl;
-	private Synth synth;
+	private PredefinedSynth synth;
 
 	public PlaySynth(final int note) {
 		this(note + "");
@@ -20,11 +20,11 @@ public class PlaySynth implements Command {
 	}
 
 	public PlaySynth(final String note, final ParamsCtrlCommon ctrl) {
-		this(note, ctrl, Synth.DEFAULT);
+		this(note, ctrl, PredefinedSynth.DEFAULT);
 
 	}
 
-	public PlaySynth(final String note, final ParamsCtrlCommon ctrl, final Synth synth) {
+	public PlaySynth(final String note, final ParamsCtrlCommon ctrl, final PredefinedSynth synth) {
 		this.note = note;
 		this.ctrl = ctrl;
 		this.synth = synth;
@@ -53,7 +53,7 @@ public class PlaySynth implements Command {
 		return this;
 	}
 
-	public PlaySynth setSynth(final Synth synth) {
+	public PlaySynth setSynth(final PredefinedSynth synth) {
 		this.synth = synth;
 		return this;
 	}

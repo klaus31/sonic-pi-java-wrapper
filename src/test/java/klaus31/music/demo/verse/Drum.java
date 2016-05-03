@@ -10,7 +10,13 @@ import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.PredefinedSample;
 import klaus31.music.theme.Theme;
 
-public class Drum implements Theme {
+class Drum implements Theme {
+
+	private final int loops;
+
+	public Drum(final int loops) {
+		this.loops = loops;
+	}
 
 	@Override
 	public SonglineList getSonglines() {
@@ -22,7 +28,7 @@ public class Drum implements Theme {
 		final PlaySample cowbell = new PlaySample(PredefinedSample.DRUM_COWBELL);
 		cowbell.getCtrl().changeAmp(0.2);
 		int i = 0;
-		while (i++ < 10) {
+		while (i++ < loops) {
 			drums.add(bass);
 			drums.add(cymbal);
 			drums.add(HALF_BEAT);
