@@ -1,9 +1,9 @@
 package com.github.klaus31.music.demo;
 
-import static com.github.klaus31.music.Sample.AMBI_PIANO;
-import static com.github.klaus31.music.Sample.AMBI_SWOOSH;
 import static com.github.klaus31.music.command.Sleep.ONE_BEAT;
 import static com.github.klaus31.music.command.Sleep.TWO_BEATS;
+import static com.github.klaus31.music.sample.PredefinedSample.AMBI_PIANO;
+import static com.github.klaus31.music.sample.PredefinedSample.AMBI_SWOOSH;
 
 import com.github.klaus31.music.SonglineList;
 import com.github.klaus31.music.Synth;

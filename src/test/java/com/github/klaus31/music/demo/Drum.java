@@ -3,11 +3,11 @@ package com.github.klaus31.music.demo;
 import static com.github.klaus31.music.command.Sleep.HALF_BEAT;
 import static com.github.klaus31.music.command.Sleep.QUARTER_BEAT;
 
-import com.github.klaus31.music.Sample;
 import com.github.klaus31.music.SonglineList;
 import com.github.klaus31.music.command.Command;
 import com.github.klaus31.music.command.PlaySample;
 import com.github.klaus31.music.command.Sleep;
+import com.github.klaus31.music.sample.PredefinedSample;
 import com.github.klaus31.music.theme.Theme;
 
 public class Drum implements Theme {
@@ -15,11 +15,11 @@ public class Drum implements Theme {
 	@Override
 	public SonglineList getSonglines() {
 		final SonglineList drums = new SonglineList();
-		final Command bass = new PlaySample(Sample.DRUM_BASS_SOFT);
-		final PlaySample snare = new PlaySample(Sample.DRUM_SNARE_SOFT);
+		final Command bass = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
+		final PlaySample snare = new PlaySample(PredefinedSample.DRUM_SNARE_SOFT);
 		snare.getCtrl().changeAmp(2);
-		final Command cymbal = new PlaySample(Sample.DRUM_CYMBAL_CLOSED);
-		final PlaySample cowbell = new PlaySample(Sample.DRUM_COWBELL);
+		final Command cymbal = new PlaySample(PredefinedSample.DRUM_CYMBAL_CLOSED);
+		final PlaySample cowbell = new PlaySample(PredefinedSample.DRUM_COWBELL);
 		cowbell.getCtrl().changeAmp(0.2);
 		int i = 0;
 		while (i++ < 10) {
