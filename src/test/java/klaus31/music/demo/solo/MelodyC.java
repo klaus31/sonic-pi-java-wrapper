@@ -1,4 +1,4 @@
-package klaus31.music.demo;
+package klaus31.music.demo.solo;
 
 import static klaus31.music.Synth.MOD_SINE;
 

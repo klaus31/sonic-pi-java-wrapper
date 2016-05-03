@@ -1,4 +1,4 @@
-package klaus31.music.demo;
+package klaus31.music.demo.bridge;
 
 import static klaus31.music.Synth.DULL_BELL;
 import static klaus31.music.Synth.FM;
