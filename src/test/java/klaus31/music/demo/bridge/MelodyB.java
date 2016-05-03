@@ -1,13 +1,13 @@
 package klaus31.music.demo.bridge;
 
-import static klaus31.music.Synth.DULL_BELL;
-import static klaus31.music.Synth.FM;
 import static klaus31.music.command.Sleep.HALF_BEAT;
+import static klaus31.music.command.synth.Synth.DULL_BELL;
+import static klaus31.music.command.synth.Synth.FM;
 
 import klaus31.music.SonglineList;
-import klaus31.music.command.PlaySynth;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.params.Pan;
+import klaus31.music.command.synth.PlaySynth;
 import klaus31.music.theme.Theme;
 
 public class MelodyB implements Theme {

@@ -1,13 +1,13 @@
 package klaus31.music.demo.solo;
 
-import static klaus31.music.Synth.MOD_SINE;
+import static klaus31.music.command.synth.Synth.MOD_SINE;
 
 import klaus31.music.SonglineList;
-import klaus31.music.command.PlayNoteFactory;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.params.Amp;
 import klaus31.music.command.params.Pan;
 import klaus31.music.command.params.PlayParamsCtrl;
+import klaus31.music.command.synth.PlayNoteFactory;
 import klaus31.music.theme.Theme;
 
 public class MelodyC implements Theme {

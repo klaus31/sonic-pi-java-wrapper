@@ -1,4 +1,4 @@
-package klaus31.music.util;
+package klaus31.music;
 
 public class Rubyalizer {
 	public static String colonize(final String arg) {

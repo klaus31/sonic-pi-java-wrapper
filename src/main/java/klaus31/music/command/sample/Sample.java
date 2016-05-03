@@ -1,4 +1,4 @@
-package klaus31.music.sample;
+package klaus31.music.command.sample;
 
 public interface Sample {
 

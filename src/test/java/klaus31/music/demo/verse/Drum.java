@@ -5,9 +5,9 @@ import static klaus31.music.command.Sleep.QUARTER_BEAT;
 
 import klaus31.music.SonglineList;
 import klaus31.music.command.Command;
-import klaus31.music.command.PlaySample;
 import klaus31.music.command.Sleep;
-import klaus31.music.sample.PredefinedSample;
+import klaus31.music.command.sample.PlaySample;
+import klaus31.music.command.sample.PredefinedSample;
 import klaus31.music.theme.Theme;
 
 public class Drum implements Theme {

@@ -1,6 +1,6 @@
-package klaus31.music;
+package klaus31.music.command.synth;
 
-import static klaus31.music.util.Rubyalizer.colonize;
+import static klaus31.music.Rubyalizer.colonize;
 
 public enum Synth {
 

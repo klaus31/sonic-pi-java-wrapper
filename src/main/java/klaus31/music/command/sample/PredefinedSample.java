@@ -1,6 +1,6 @@
-package klaus31.music.sample;
+package klaus31.music.command.sample;
 
-import static klaus31.music.util.Rubyalizer.colonize;
+import static klaus31.music.Rubyalizer.colonize;
 
 public class PredefinedSample implements Sample {
 

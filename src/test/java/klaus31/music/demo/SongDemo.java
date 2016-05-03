@@ -3,7 +3,7 @@ package klaus31.music.demo;
 import java.io.IOException;
 
 import klaus31.music.Player;
-import klaus31.music.SongSonicPiBashPlayer;
+import klaus31.music.PlayerSonicPi;
 import klaus31.music.SonglineList;
 import klaus31.music.command.UseBpm;
 import klaus31.music.demo.bridge.Bridge;
@@ -16,7 +16,7 @@ public class SongDemo implements Song {
 
 	public static void main(final String... args) throws IOException {
 		final Song song = new SongDemo();
-		final Player player = new SongSonicPiBashPlayer();
+		final Player player = new PlayerSonicPi();
 		player.play(song);
 	}
 

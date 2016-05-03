@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 
 import klaus31.music.theme.Song;
 
-public class SongSonicPiBashPlayer implements Player {
+public class PlayerSonicPi implements Player {
 
 	@Override
 	public void play(final Song song) {

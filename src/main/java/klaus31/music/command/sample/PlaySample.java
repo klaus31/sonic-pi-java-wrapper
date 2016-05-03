@@ -1,8 +1,8 @@
-package klaus31.music.command;
+package klaus31.music.command.sample;
 
 import klaus31.music.Songline;
+import klaus31.music.command.Command;
 import klaus31.music.command.params.SampleParamsCtrl;
-import klaus31.music.sample.Sample;
 
 public class PlaySample implements Command {
 

@@ -1,7 +1,7 @@
-package klaus31.music.command;
+package klaus31.music.command.synth;
 
 import klaus31.music.Songline;
-import klaus31.music.Synth;
+import klaus31.music.command.Command;
 import klaus31.music.command.params.ParamsCtrlCommon;
 import klaus31.music.command.params.PlayParamsCtrl;
 
