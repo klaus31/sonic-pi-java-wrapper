@@ -6,12 +6,15 @@ import klaus31.music.theme.Theme;
 import klaus31.music.theme.ThemeThreaded;
 
 public class Solo implements Theme {
+
 	private final Theme melody = new MelodyC();
+	private final Theme drum = new Drum();
 
 	@Override
 	public SonglineList getSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(new ThemeThreaded(melody));
+		songlines.add(new ThemeThreaded(drum));
 		return songlines;
 	}
 
