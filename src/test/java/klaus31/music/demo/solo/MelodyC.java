@@ -15,7 +15,7 @@ class MelodyC implements Theme {
 	final SonglineList songlines = new SonglineList();
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final PlayParamsCtrl ctrlBassline = new PlayParamsCtrl();
 		ctrlBassline.setPan(Pan.LEFT_HALF);
 		final PlayParamsCtrl ctrlUpperline = new PlayParamsCtrl();

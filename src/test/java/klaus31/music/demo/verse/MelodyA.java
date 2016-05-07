@@ -23,7 +23,7 @@ class MelodyA implements Theme {
 	}
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final PlaySynth bing = new PlaySynth(55).setSynth(PredefinedSynth.HOLLOW);
 		bing.getCtrl().changeAmp(2).setPan(Pan.RIGHT_HALF);
 		for (int i = 0; i < loops; i++) {

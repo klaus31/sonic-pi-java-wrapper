@@ -25,7 +25,7 @@ public class Sleep implements Command {
 	}
 
 	@Override
-	public Songline getSongline() {
+	public Songline createSongline() {
 		return Songline.create(String.format("sleep %s", beats));
 	}
 

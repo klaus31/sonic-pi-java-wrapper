@@ -4,5 +4,5 @@ import klaus31.music.Songline;
 
 public interface Command {
 
-	Songline getSongline();
+	Songline createSongline();
 }

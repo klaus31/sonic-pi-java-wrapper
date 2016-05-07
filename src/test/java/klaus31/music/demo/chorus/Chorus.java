@@ -10,7 +10,7 @@ public class Chorus implements Theme {
 	private final Theme melody = new Melody();
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(new ThemeThreaded(melody));
 		return songlines;

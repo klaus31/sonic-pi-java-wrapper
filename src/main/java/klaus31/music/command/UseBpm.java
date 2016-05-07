@@ -11,7 +11,7 @@ public class UseBpm implements Command {
 	}
 
 	@Override
-	public Songline getSongline() {
+	public Songline createSongline() {
 		return Songline.create(String.format("use_bpm %d", number));
 	}
 }

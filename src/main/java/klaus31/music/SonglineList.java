@@ -13,21 +13,21 @@ public class SonglineList extends ArrayList<Songline> {
 	private double totalBeats = 0;
 
 	public void add(final Command command) {
-		add(command.getSongline());
+		add(command.createSongline());
 	}
 
 	public void add(final Sleep sleep) {
 		totalBeats += sleep.getBeats();
-		add(sleep.getSongline());
+		add(sleep.createSongline());
 	}
 
 	public void add(final Theme theme) {
-		addAll(theme.getSonglines());
+		addAll(theme.createSonglines());
 		add(theme.getTotalBeats());
 	}
 
 	public void add(final ThemeThreaded themeThreaded) {
-		addAll(themeThreaded.getSonglines());
+		addAll(themeThreaded.createSonglines());
 	}
 
 	/**

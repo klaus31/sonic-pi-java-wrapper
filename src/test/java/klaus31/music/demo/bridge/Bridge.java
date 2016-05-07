@@ -9,7 +9,7 @@ public class Bridge implements Theme {
 	private final Theme melody = new MelodyB();
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(new ThemeThreaded(melody));
 		return songlines;

@@ -13,10 +13,10 @@ public class ThemeThreaded implements Theme {
 	}
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(Songline.create("in_thread do"));
-		songlines.addAll(theme.getSonglines());
+		songlines.addAll(theme.createSonglines());
 		songlines.add(Songline.create("end"));
 		return songlines;
 	}

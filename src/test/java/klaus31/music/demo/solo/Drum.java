@@ -13,7 +13,7 @@ public class Drum implements Theme {
 	private final SonglineList songlines = new SonglineList();
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final Command bass = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
 		final PlaySample snare = new PlaySample(PredefinedSample.DRUM_SNARE_SOFT);
 		final Command cymbal = new PlaySample(PredefinedSample.DRUM_CYMBAL_CLOSED);

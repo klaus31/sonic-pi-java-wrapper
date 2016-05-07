@@ -19,7 +19,7 @@ class Drum implements Theme {
 	}
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList drums = new SonglineList();
 		final Command bass = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
 		final PlaySample snare = new PlaySample(PredefinedSample.DRUM_SNARE_SOFT);

@@ -11,7 +11,7 @@ public class Solo implements Theme {
 	private final Theme drum = new Drum();
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(new ThemeThreaded(melody));
 		songlines.add(new ThemeThreaded(drum));

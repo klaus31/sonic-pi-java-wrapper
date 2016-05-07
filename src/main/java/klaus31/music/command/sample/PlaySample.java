@@ -23,7 +23,7 @@ public class PlaySample implements Command {
 	}
 
 	@Override
-	public Songline getSongline() {
+	public Songline createSongline() {
 		return Songline.create("sample " + sample.getName() + ctrl.toApplyString());
 	}
 

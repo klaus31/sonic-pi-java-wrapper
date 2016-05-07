@@ -35,7 +35,7 @@ public class PlaySynth implements Command {
 	}
 
 	@Override
-	public Songline getSongline() {
+	public Songline createSongline() {
 		return Songline.create(String.format("use_synth %s%nplay %s%s", synth.getName(), note, ctrl.toApplyString()));
 	}
 

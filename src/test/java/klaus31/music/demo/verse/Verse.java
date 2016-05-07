@@ -11,7 +11,7 @@ public class Verse implements Theme {
 	private final Theme melody = new MelodyA(3);
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(new ThemeThreaded(drum));
 		songlines.add(new ThemeThreaded(melody));

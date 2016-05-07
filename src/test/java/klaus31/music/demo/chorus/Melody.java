@@ -28,7 +28,7 @@ public class Melody implements Theme {
 	}
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final double[][] startEnd = { { 0, 0.05 }, { 0, 0.05 }, { 0, 0.05 }, { 0.05, 0.1 }, { 0, 0.05 } };
 		Times.loop(startEnd.length, i -> {
 			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.2, 0.3, 0.5, HALF_BEAT);

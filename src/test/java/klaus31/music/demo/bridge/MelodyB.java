@@ -13,7 +13,7 @@ import klaus31.music.theme.Theme;
 class MelodyB implements Theme {
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		int note = 55;
 		final PlaySynth play = new PlaySynth(note);

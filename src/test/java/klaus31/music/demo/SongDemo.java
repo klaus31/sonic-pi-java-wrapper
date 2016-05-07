@@ -35,7 +35,7 @@ public class SongDemo implements Song {
 	}
 
 	@Override
-	public SonglineList getSonglines() {
+	public SonglineList createSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(verse1);
 		// songlines.add(chorus2); // FIXME not playing on my bot :(
