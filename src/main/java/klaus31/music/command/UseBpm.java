@@ -1,7 +1,5 @@
 package klaus31.music.command;
 
-import klaus31.music.theme.Songline;
-
 public class UseBpm implements Command {
 
 	private final int number;
@@ -11,7 +9,7 @@ public class UseBpm implements Command {
 	}
 
 	@Override
-	public Songline createSongline() {
-		return Songline.create(String.format("use_bpm %d", number));
+	public String format() {
+		return String.format("use_bpm %d", number);
 	}
 }

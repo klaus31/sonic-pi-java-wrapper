@@ -2,12 +2,11 @@ package klaus31.music.command.sample;
 
 import klaus31.music.command.Command;
 import klaus31.music.command.params.SampleParamsCtrl;
-import klaus31.music.theme.Songline;
 
 public class PlaySample implements Command {
 
-	private final Sample sample;
 	private final SampleParamsCtrl ctrl;
+	private Sample sample;
 
 	public PlaySample(final Sample sample) {
 		this(sample, SampleParamsCtrl.createDefault());
@@ -18,13 +17,25 @@ public class PlaySample implements Command {
 		this.ctrl = ctrl;
 	}
 
+	@Override
+	public String format() {
+		return "sample " + sample.getName() + ctrl.toApplyString();
+	}
+
 	public SampleParamsCtrl getCtrl() {
 		return ctrl;
 	}
 
-	@Override
-	public Songline createSongline() {
-		return Songline.create("sample " + sample.getName() + ctrl.toApplyString());
+	public Sample getSample() {
+		return sample;
 	}
 
+	public void mute() {
+		getCtrl().mute();
+
+	}
+
+	public void setSample(final Sample sample) {
+		this.sample = sample;
+	}
 }

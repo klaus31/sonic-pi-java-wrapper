@@ -15,6 +15,11 @@ public class ParamsCtrlCommon {
 		return this;
 	}
 
+	public void mute() {
+		changeAmp(0);
+
+	}
+
 	public ParamsCtrlCommon put(final String key, final Object value) {
 		universalParams.put(key, value);
 		return this;

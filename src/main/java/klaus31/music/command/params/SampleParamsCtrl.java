@@ -5,4 +5,5 @@ public class SampleParamsCtrl extends ParamsCtrlCommon {
 	public static final SampleParamsCtrl createDefault() {
 		return new SampleParamsCtrl();
 	}
+
 }

@@ -3,12 +3,11 @@ package klaus31.music.command.synth;
 import klaus31.music.command.Command;
 import klaus31.music.command.params.ParamsCtrlCommon;
 import klaus31.music.command.params.PlayParamsCtrl;
-import klaus31.music.theme.Songline;
 
 public class PlaySynth implements Command {
 
-	private String note;
 	private ParamsCtrlCommon ctrl;
+	private String note;
 	private PredefinedSynth synth;
 
 	public PlaySynth(final int note) {
@@ -30,13 +29,13 @@ public class PlaySynth implements Command {
 		this.synth = synth;
 	}
 
-	public ParamsCtrlCommon getCtrl() {
-		return ctrl;
+	@Override
+	public String format() {
+		return String.format("use_synth %s%nplay %s%s", synth.getName(), note, ctrl.toApplyString());
 	}
 
-	@Override
-	public Songline createSongline() {
-		return Songline.create(String.format("use_synth %s%nplay %s%s", synth.getName(), note, ctrl.toApplyString()));
+	public ParamsCtrlCommon getCtrl() {
+		return ctrl;
 	}
 
 	public PlaySynth setCtrl(final ParamsCtrlCommon ctrl) {

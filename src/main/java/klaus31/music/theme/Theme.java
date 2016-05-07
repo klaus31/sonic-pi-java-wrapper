@@ -6,14 +6,14 @@ import klaus31.music.command.sample.PlaySample;
 /**
  * a theme or in other words "something, that can be played"
  */
-public class Theme {
+public abstract class Theme {
 
 	private final boolean runsInThread = false;
 
-	private final SonglineList songlines;
+	private final Songlines songlines;
 
 	public Theme() {
-		songlines = new SonglineList();
+		songlines = new Songlines();
 	}
 
 	protected void add(final PlaySample command) {
@@ -24,7 +24,7 @@ public class Theme {
 		songlines.add(sleep);
 	}
 
-	SonglineList getSonglines() {
+	Songlines getSonglines() {
 		return songlines;
 	}
 
@@ -45,8 +45,8 @@ public class Theme {
 	}
 
 	protected void wrap(final String firstLine, final String lastLine) {
-		songlines.add(0, Songline.create(firstLine));
-		songlines.add(Songline.create(lastLine));
+		songlines.add(0, () -> firstLine);
+		songlines.add(() -> lastLine);
 	}
 
 }

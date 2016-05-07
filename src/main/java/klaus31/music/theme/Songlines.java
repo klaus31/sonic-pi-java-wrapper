@@ -5,18 +5,14 @@ import java.util.ArrayList;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
 
-class SonglineList extends ArrayList<Songline> {
+class Songlines extends ArrayList<Command> {
 	private static final long serialVersionUID = 1L;
 
 	private double totalBeats = 0;
 
-	void add(final Command command) {
-		add(command.createSongline());
-	}
-
 	void add(final Sleep sleep) {
+		add((Command) sleep);
 		totalBeats += sleep.getBeats();
-		add(sleep.createSongline());
 	}
 
 	/**
@@ -29,7 +25,7 @@ class SonglineList extends ArrayList<Songline> {
 		return new Sleep(totalBeats);
 	}
 
-	public void multiplyTotalBeats(final int loops) {
+	void multiplyTotalBeats(final int loops) {
 		totalBeats *= loops;
 	}
 }
