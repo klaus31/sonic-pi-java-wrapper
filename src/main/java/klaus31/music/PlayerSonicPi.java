@@ -9,6 +9,8 @@ import klaus31.music.theme.Song;
 
 public class PlayerSonicPi implements Player {
 
+	private boolean debugMode = false;
+
 	@Override
 	public void play(final Song song) {
 		try {
@@ -16,8 +18,10 @@ public class PlayerSonicPi implements Player {
 			System.out.println("Songfile: " + songfile.toPath());
 
 			final StringBuilder songlines = new StringBuilder();
-			songlines.append(String.format("%s%n", song.getBpmCommand().createSongline()));
-			song.getSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline.toString())));
+			song.doWithSonglines(songline -> songlines.append(String.format("%s%n", songline.toString())));
+			if (debugMode) {
+				song.doWithSonglines(System.out::println);
+			}
 
 			FileUtils.writeStringToFile(songfile, songlines.toString());
 
@@ -28,5 +32,10 @@ public class PlayerSonicPi implements Player {
 		} catch (NullPointerException | IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Player activateDebugging() {
+		debugMode = true;
+		return this;
 	}
 }

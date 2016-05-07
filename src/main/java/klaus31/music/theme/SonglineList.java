@@ -5,27 +5,18 @@ import java.util.ArrayList;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
 
-public class SonglineList extends ArrayList<Songline> {
+class SonglineList extends ArrayList<Songline> {
 	private static final long serialVersionUID = 1L;
 
 	private double totalBeats = 0;
 
-	public void add(final Command command) {
+	void add(final Command command) {
 		add(command.createSongline());
 	}
 
-	public void add(final Sleep sleep) {
+	void add(final Sleep sleep) {
 		totalBeats += sleep.getBeats();
 		add(sleep.createSongline());
-	}
-
-	public void add(final Theme theme) {
-		addAll(theme.getSonglines());
-		add(theme.getTotalBeats());
-	}
-
-	public void add(final ThemeThreaded themeThreaded) {
-		addAll(themeThreaded.getSonglines());
 	}
 
 	/**
@@ -34,7 +25,11 @@ public class SonglineList extends ArrayList<Songline> {
 	 *         this method for all your sleeps in the songlines, the result is
 	 *         incorrect!
 	 */
-	public Sleep getTotalBeats() {
+	Sleep getTotalBeats() {
 		return new Sleep(totalBeats);
+	}
+
+	public void multiplyTotalBeats(final int loops) {
+		totalBeats *= loops;
 	}
 }
