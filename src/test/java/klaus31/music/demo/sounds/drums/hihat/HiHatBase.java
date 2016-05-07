@@ -1,4 +1,4 @@
-package klaus31.music.drums.hihat;
+package klaus31.music.demo.sounds.drums.hihat;
 
 import static klaus31.music.command.sample.PredefinedSample.DRUM_CYMBAL_CLOSED;
 

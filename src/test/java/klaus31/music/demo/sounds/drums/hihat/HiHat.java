@@ -1,4 +1,4 @@
-package klaus31.music.drums.hihat;
+package klaus31.music.demo.sounds.drums.hihat;
 
 import klaus31.music.theme.Theme;
 

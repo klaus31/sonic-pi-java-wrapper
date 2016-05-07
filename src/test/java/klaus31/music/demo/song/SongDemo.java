@@ -1,14 +1,14 @@
-package klaus31.music.demo;
+package klaus31.music.demo.song;
 
 import java.io.IOException;
 
 import klaus31.music.Player;
 import klaus31.music.PlayerSonicPi;
 import klaus31.music.command.UseBpm;
-import klaus31.music.demo.bridge.Bridge;
-import klaus31.music.demo.chorus.Chorus;
-import klaus31.music.demo.solo.Solo;
-import klaus31.music.demo.verse.Verse;
+import klaus31.music.demo.song.bridge.Bridge;
+import klaus31.music.demo.song.chorus.Chorus;
+import klaus31.music.demo.song.solo.Solo;
+import klaus31.music.demo.song.verse.Verse;
 import klaus31.music.theme.Song;
 import klaus31.music.theme.SonglineList;
 import klaus31.music.theme.Theme;

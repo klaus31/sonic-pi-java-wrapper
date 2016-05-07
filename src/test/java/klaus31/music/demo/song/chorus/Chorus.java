@@ -1,4 +1,4 @@
-package klaus31.music.demo.chorus;
+package klaus31.music.demo.song.chorus;
 
 import klaus31.music.command.Sleep;
 import klaus31.music.theme.SonglineList;

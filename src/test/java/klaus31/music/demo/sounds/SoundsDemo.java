@@ -1,4 +1,4 @@
-package klaus31.music.demo;
+package klaus31.music.demo.sounds;
 
 import static klaus31.music.command.sample.PredefinedSample.DRUM_CYMBAL_PEDAL;
 
@@ -8,7 +8,7 @@ import klaus31.music.Player;
 import klaus31.music.PlayerSonicPi;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.UseBpm;
-import klaus31.music.drums.hihat.HiHatBase;
+import klaus31.music.demo.sounds.drums.hihat.HiHatBase;
 import klaus31.music.theme.Song;
 import klaus31.music.theme.SonglineList;
 

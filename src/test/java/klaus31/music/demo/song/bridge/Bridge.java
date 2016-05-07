@@ -1,4 +1,4 @@
-package klaus31.music.demo.bridge;
+package klaus31.music.demo.song.bridge;
 
 import klaus31.music.command.Sleep;
 import klaus31.music.theme.SonglineList;

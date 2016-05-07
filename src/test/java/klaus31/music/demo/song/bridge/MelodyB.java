@@ -1,4 +1,4 @@
-package klaus31.music.demo.bridge;
+package klaus31.music.demo.song.bridge;
 
 import static klaus31.music.command.Sleep.HALF_BEAT;
 import static klaus31.music.command.synth.PredefinedSynth.DULL_BELL;

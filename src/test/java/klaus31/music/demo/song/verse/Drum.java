@@ -1,4 +1,4 @@
-package klaus31.music.demo.verse;
+package klaus31.music.demo.song.verse;
 
 import static klaus31.music.command.Sleep.HALF_BEAT;
 import static klaus31.music.command.Sleep.QUARTER_BEAT;

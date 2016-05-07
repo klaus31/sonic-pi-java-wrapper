@@ -1,4 +1,4 @@
-package klaus31.music.demo.solo;
+package klaus31.music.demo.song.solo;
 
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
