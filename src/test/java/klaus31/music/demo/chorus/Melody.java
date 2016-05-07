@@ -13,6 +13,17 @@ public class Melody implements Theme {
 
 	final SonglineList songlines = new SonglineList();
 
+	public Melody() {
+		final double[][] startEnd = { { 0, 0.05 }, { 0, 0.05 }, { 0, 0.05 }, { 0.05, 0.1 }, { 0, 0.05 } };
+		Times.loop(startEnd.length, i -> {
+			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.2, 0.3, 0.5, HALF_BEAT);
+			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.15, 0.25, 0.45, new Sleep(0.65 / 2));
+			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.15, 0.2, 0.4, new Sleep(0.35 / 2));
+			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.15, 0.22, 0.3, HALF_BEAT);
+			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.3, 0.4, 0.6, HALF_BEAT);
+		});
+	}
+
 	private void addGuitarBase(final double start, final double finish, final double rateA, final double rateB,
 			final double rateC, final Sleep sleep) {
 		final PlaySample guitarBase = new PlaySample(PredefinedSample.GUIT_HARMONICS);
@@ -28,15 +39,7 @@ public class Melody implements Theme {
 	}
 
 	@Override
-	public SonglineList createSonglines() {
-		final double[][] startEnd = { { 0, 0.05 }, { 0, 0.05 }, { 0, 0.05 }, { 0.05, 0.1 }, { 0, 0.05 } };
-		Times.loop(startEnd.length, i -> {
-			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.2, 0.3, 0.5, HALF_BEAT);
-			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.15, 0.25, 0.45, new Sleep(0.65 / 2));
-			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.15, 0.2, 0.4, new Sleep(0.35 / 2));
-			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.15, 0.22, 0.3, HALF_BEAT);
-			addGuitarBase(startEnd[i][0], startEnd[i][1], 0.3, 0.4, 0.6, HALF_BEAT);
-		});
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

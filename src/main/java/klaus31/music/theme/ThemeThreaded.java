@@ -7,17 +7,17 @@ import klaus31.music.command.Sleep;
 public class ThemeThreaded implements Theme {
 
 	private final Theme theme;
+	final SonglineList songlines = new SonglineList();
 
 	public ThemeThreaded(final Theme theme) {
 		this.theme = theme;
+		songlines.add(Songline.create("in_thread do"));
+		songlines.addAll(theme.getSonglines());
+		songlines.add(Songline.create("end"));
 	}
 
 	@Override
-	public SonglineList createSonglines() {
-		final SonglineList songlines = new SonglineList();
-		songlines.add(Songline.create("in_thread do"));
-		songlines.addAll(theme.createSonglines());
-		songlines.add(Songline.create("end"));
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

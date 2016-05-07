@@ -14,8 +14,7 @@ class MelodyC implements Theme {
 
 	final SonglineList songlines = new SonglineList();
 
-	@Override
-	public SonglineList createSonglines() {
+	public MelodyC() {
 		final PlayParamsCtrl ctrlBassline = new PlayParamsCtrl();
 		ctrlBassline.setPan(Pan.LEFT_HALF);
 		final PlayParamsCtrl ctrlUpperline = new PlayParamsCtrl();
@@ -66,6 +65,10 @@ class MelodyC implements Theme {
 		songlines.add(upperline.createPlay(1));
 		songlines.add(Sleep.TWO_BEATS);
 		songlines.add(bassline.createPlayChord(0).setSynth(MOD_SINE));
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

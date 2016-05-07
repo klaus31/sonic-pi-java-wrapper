@@ -12,17 +12,16 @@ public class Drum implements Theme {
 
 	private final SonglineList songlines = new SonglineList();
 
-	@Override
-	public SonglineList createSonglines() {
+	public Drum() {
 		final Command bass = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
 		final PlaySample snare = new PlaySample(PredefinedSample.DRUM_SNARE_SOFT);
 		final Command cymbal = new PlaySample(PredefinedSample.DRUM_CYMBAL_CLOSED);
 		final PlaySample cynbalOpen = new PlaySample(PredefinedSample.DRUM_CYMBAL_OPEN);
 		final PlaySample roll = new PlaySample(PredefinedSample.DRUM_ROLL);
 		roll.getCtrl() // @formatter:off
-				.put("finish", 0.3) 
-				.put("release", 0.5)
-				.put("attack", 0.2); // @formatter:on
+		.put("finish", 0.3) 
+		.put("release", 0.5)
+		.put("attack", 0.2); // @formatter:on
 
 		Times.loop(3, i -> {
 			songlines.add(snare);
@@ -50,6 +49,10 @@ public class Drum implements Theme {
 		songlines.add(cynbalOpen);
 		songlines.add(Sleep.QUARTER_BEAT);
 		songlines.add(roll);
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

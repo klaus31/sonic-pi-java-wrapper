@@ -6,5 +6,5 @@ import klaus31.music.command.UseBpm;
 public interface Song {
 	UseBpm getBpmCommand();
 
-	SonglineList createSonglines();
+	SonglineList getSonglines();
 }

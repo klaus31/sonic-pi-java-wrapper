@@ -9,12 +9,15 @@ public class Verse implements Theme {
 
 	private final Theme drum = new Drum(10);
 	private final Theme melody = new MelodyA(3);
+	final SonglineList songlines = new SonglineList();
 
-	@Override
-	public SonglineList createSonglines() {
-		final SonglineList songlines = new SonglineList();
+	public Verse() {
 		songlines.add(new ThemeThreaded(drum));
 		songlines.add(new ThemeThreaded(melody));
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

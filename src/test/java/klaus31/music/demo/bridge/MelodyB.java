@@ -12,9 +12,9 @@ import klaus31.music.theme.Theme;
 
 class MelodyB implements Theme {
 
-	@Override
-	public SonglineList createSonglines() {
-		final SonglineList songlines = new SonglineList();
+	final SonglineList songlines = new SonglineList();
+
+	public MelodyB() {
 		int note = 55;
 		final PlaySynth play = new PlaySynth(note);
 		play.getCtrl().setPan(Pan.LEFT_ALMOST);
@@ -23,6 +23,10 @@ class MelodyB implements Theme {
 			songlines.add(HALF_BEAT);
 			play.setNote(note).getCtrl().togglePan();
 		}
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

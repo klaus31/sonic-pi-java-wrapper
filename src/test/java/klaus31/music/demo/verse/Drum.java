@@ -12,15 +12,9 @@ import klaus31.music.theme.Theme;
 
 class Drum implements Theme {
 
-	private final int loops;
+	final SonglineList drums = new SonglineList();
 
 	public Drum(final int loops) {
-		this.loops = loops;
-	}
-
-	@Override
-	public SonglineList createSonglines() {
-		final SonglineList drums = new SonglineList();
 		final Command bass = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
 		final PlaySample snare = new PlaySample(PredefinedSample.DRUM_SNARE_SOFT);
 		snare.getCtrl().changeAmp(2);
@@ -49,6 +43,10 @@ class Drum implements Theme {
 				drums.add(HALF_BEAT);
 			}
 		}
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return drums;
 	}
 

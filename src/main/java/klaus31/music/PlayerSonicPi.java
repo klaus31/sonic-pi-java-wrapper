@@ -17,7 +17,7 @@ public class PlayerSonicPi implements Player {
 
 			final StringBuilder songlines = new StringBuilder();
 			songlines.append(String.format("%s%n", song.getBpmCommand().createSongline()));
-			song.createSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline.toString())));
+			song.getSonglines().forEach(songline -> songlines.append(String.format("%s%n", songline.toString())));
 
 			FileUtils.writeStringToFile(songfile, songlines.toString());
 

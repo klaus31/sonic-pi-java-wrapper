@@ -22,12 +22,12 @@ public class SonglineList extends ArrayList<Songline> {
 	}
 
 	public void add(final Theme theme) {
-		addAll(theme.createSonglines());
+		addAll(theme.getSonglines());
 		add(theme.getTotalBeats());
 	}
 
 	public void add(final ThemeThreaded themeThreaded) {
-		addAll(themeThreaded.createSonglines());
+		addAll(themeThreaded.getSonglines());
 	}
 
 	/**

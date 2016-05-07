@@ -8,7 +8,7 @@ import klaus31.music.command.Sleep;
  */
 public interface Theme {
 
-	SonglineList createSonglines();
+	SonglineList getSonglines();
 
 	Sleep getTotalBeats();
 }

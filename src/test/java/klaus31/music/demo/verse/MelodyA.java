@@ -16,14 +16,8 @@ import klaus31.music.theme.Theme;
 class MelodyA implements Theme {
 
 	private final SonglineList songlines = new SonglineList();
-	private final int loops;
 
 	public MelodyA(final int loops) {
-		this.loops = loops;
-	}
-
-	@Override
-	public SonglineList createSonglines() {
 		final PlaySynth bing = new PlaySynth(55).setSynth(PredefinedSynth.HOLLOW);
 		bing.getCtrl().changeAmp(2).setPan(Pan.RIGHT_HALF);
 		for (int i = 0; i < loops; i++) {
@@ -40,6 +34,10 @@ class MelodyA implements Theme {
 			songlines.add(new Sleep(4));
 			bing.getCtrl().togglePan();
 		}
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

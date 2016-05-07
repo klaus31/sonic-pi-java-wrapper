@@ -8,11 +8,14 @@ import klaus31.music.theme.ThemeThreaded;
 public class Chorus implements Theme {
 
 	private final Theme melody = new Melody();
+	final SonglineList songlines = new SonglineList();
+
+	public Chorus() {
+		songlines.add(new ThemeThreaded(melody));
+	}
 
 	@Override
-	public SonglineList createSonglines() {
-		final SonglineList songlines = new SonglineList();
-		songlines.add(new ThemeThreaded(melody));
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

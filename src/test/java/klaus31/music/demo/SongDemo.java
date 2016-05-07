@@ -22,21 +22,16 @@ public class SongDemo implements Song {
 	}
 
 	private final Theme verse1 = new Verse();
+
 	private final Theme verse2 = new Verse();
 	private final Theme verse3 = new Verse();
 	private final Theme bridge = new Bridge();
 	private final Theme chorus1 = new Chorus();
 	private final Theme chorus2 = new Chorus();
 	private final Theme solo = new Solo();
+	private final SonglineList songlines = new SonglineList();
 
-	@Override
-	public UseBpm getBpmCommand() {
-		return new UseBpm(80);
-	}
-
-	@Override
-	public SonglineList createSonglines() {
-		final SonglineList songlines = new SonglineList();
+	public SongDemo() {
 		songlines.add(verse1);
 		// songlines.add(chorus2); // FIXME not playing on my bot :(
 		songlines.add(bridge);
@@ -44,6 +39,15 @@ public class SongDemo implements Song {
 		// songlines.add(chorus2); // FIXME not playing on my bot :(
 		songlines.add(solo);
 		songlines.add(verse3);
+	}
+
+	@Override
+	public UseBpm getBpmCommand() {
+		return new UseBpm(80);
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 

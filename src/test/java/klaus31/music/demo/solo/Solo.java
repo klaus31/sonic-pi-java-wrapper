@@ -9,12 +9,15 @@ public class Solo implements Theme {
 
 	private final Theme melody = new MelodyC();
 	private final Theme drum = new Drum();
+	final SonglineList songlines = new SonglineList();
 
-	@Override
-	public SonglineList createSonglines() {
-		final SonglineList songlines = new SonglineList();
+	public Solo() {
 		songlines.add(new ThemeThreaded(melody));
 		songlines.add(new ThemeThreaded(drum));
+	}
+
+	@Override
+	public SonglineList getSonglines() {
 		return songlines;
 	}
 
