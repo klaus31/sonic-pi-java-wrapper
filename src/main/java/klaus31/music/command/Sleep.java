@@ -8,6 +8,8 @@ import klaus31.music.Songline;
  */
 public class Sleep implements Command {
 
+	public static final Sleep SIXTEENTH_BEAT = new Sleep(1D / 18D);
+	public static final Sleep EIGHTH_BEAT = new Sleep(1D / 8D);
 	public static final Sleep QUARTER_BEAT = new Sleep(1D / 4D);
 	public static final Sleep HALF_BEAT = new Sleep(1D / 2D);
 	public static final Sleep ONE_BEAT = new Sleep(1);
@@ -20,13 +22,13 @@ public class Sleep implements Command {
 		this.beats = beats;
 	}
 
-	public double getBeats() {
-		return beats;
-	}
-
 	@Override
 	public Songline createSongline() {
 		return Songline.create(String.format("sleep %s", beats));
+	}
+
+	public double getBeats() {
+		return beats;
 	}
 
 	@Override
