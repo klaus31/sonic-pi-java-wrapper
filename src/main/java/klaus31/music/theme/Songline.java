@@ -1,4 +1,4 @@
-package klaus31.music;
+package klaus31.music.theme;
 
 public class Songline {
 	public static final Songline create(final String songline) {

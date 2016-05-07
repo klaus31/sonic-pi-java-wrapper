@@ -1,11 +1,9 @@
-package klaus31.music;
+package klaus31.music.theme;
 
 import java.util.ArrayList;
 
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
-import klaus31.music.theme.Theme;
-import klaus31.music.theme.ThemeThreaded;
 
 public class SonglineList extends ArrayList<Songline> {
 	private static final long serialVersionUID = 1L;

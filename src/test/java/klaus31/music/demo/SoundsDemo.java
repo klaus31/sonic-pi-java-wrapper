@@ -6,11 +6,11 @@ import java.io.IOException;
 
 import klaus31.music.Player;
 import klaus31.music.PlayerSonicPi;
-import klaus31.music.SonglineList;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.UseBpm;
 import klaus31.music.drums.hihat.HiHatBase;
 import klaus31.music.theme.Song;
+import klaus31.music.theme.SonglineList;
 
 public class SoundsDemo implements Song {
 

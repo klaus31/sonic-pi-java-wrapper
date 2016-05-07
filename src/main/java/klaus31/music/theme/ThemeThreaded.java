@@ -1,7 +1,5 @@
 package klaus31.music.theme;
 
-import klaus31.music.Songline;
-import klaus31.music.SonglineList;
 import klaus31.music.command.Sleep;
 
 public class ThemeThreaded implements Theme {

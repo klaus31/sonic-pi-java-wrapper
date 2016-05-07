@@ -2,12 +2,12 @@ package klaus31.music.drums.hihat;
 
 import static klaus31.music.command.sample.PredefinedSample.DRUM_CYMBAL_CLOSED;
 
-import klaus31.music.SonglineList;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.Sample;
 import klaus31.music.demo.music.Times;
+import klaus31.music.theme.SonglineList;
 
 public class HiHatBase implements HiHat {
 

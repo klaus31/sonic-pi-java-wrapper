@@ -3,11 +3,11 @@ package klaus31.music.demo.verse;
 import static klaus31.music.command.Sleep.HALF_BEAT;
 import static klaus31.music.command.Sleep.QUARTER_BEAT;
 
-import klaus31.music.SonglineList;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.PredefinedSample;
+import klaus31.music.theme.SonglineList;
 import klaus31.music.theme.Theme;
 
 class Drum implements Theme {

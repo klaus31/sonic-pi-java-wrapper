@@ -4,13 +4,13 @@ import java.io.IOException;
 
 import klaus31.music.Player;
 import klaus31.music.PlayerSonicPi;
-import klaus31.music.SonglineList;
 import klaus31.music.command.UseBpm;
 import klaus31.music.demo.bridge.Bridge;
 import klaus31.music.demo.chorus.Chorus;
 import klaus31.music.demo.solo.Solo;
 import klaus31.music.demo.verse.Verse;
 import klaus31.music.theme.Song;
+import klaus31.music.theme.SonglineList;
 import klaus31.music.theme.Theme;
 
 public class SongDemo implements Song {

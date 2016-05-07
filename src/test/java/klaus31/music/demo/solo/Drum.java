@@ -1,11 +1,11 @@
 package klaus31.music.demo.solo;
 
-import klaus31.music.SonglineList;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.PredefinedSample;
 import klaus31.music.demo.music.Times;
+import klaus31.music.theme.SonglineList;
 import klaus31.music.theme.Theme;
 
 public class Drum implements Theme {

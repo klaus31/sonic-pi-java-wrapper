@@ -1,6 +1,6 @@
 package klaus31.music.command;
 
-import klaus31.music.Songline;
+import klaus31.music.theme.Songline;
 
 public class UseBpm implements Command {
 

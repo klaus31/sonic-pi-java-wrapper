@@ -5,12 +5,12 @@ import static klaus31.music.command.Sleep.TWO_BEATS;
 import static klaus31.music.command.sample.PredefinedSample.AMBI_PIANO;
 import static klaus31.music.command.sample.PredefinedSample.AMBI_SWOOSH;
 
-import klaus31.music.SonglineList;
 import klaus31.music.command.Sleep;
 import klaus31.music.command.params.Pan;
 import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.synth.PlaySynth;
 import klaus31.music.command.synth.PredefinedSynth;
+import klaus31.music.theme.SonglineList;
 import klaus31.music.theme.Theme;
 
 class MelodyA implements Theme {

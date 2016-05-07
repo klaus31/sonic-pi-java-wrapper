@@ -1,7 +1,7 @@
 package klaus31.music.demo.bridge;
 
-import klaus31.music.SonglineList;
 import klaus31.music.command.Sleep;
+import klaus31.music.theme.SonglineList;
 import klaus31.music.theme.Theme;
 import klaus31.music.theme.ThemeThreaded;
 
