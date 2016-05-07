@@ -1,22 +1,22 @@
 package klaus31.music.command.params;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ParamsCtrlCommon {
 
 	private Amp amp = Amp.DEFAULT;
 	private Pan pan = Pan.DEFAULT;
-	private final List<UniversalParam> universalParams = new ArrayList<>();
-
-	public ParamsCtrlCommon add(final UniversalParam universalParam) {
-		universalParams.add(universalParam);
-		return this;
-	}
+	private final Map<String, Object> universalParams = new HashMap<>();
 
 	public ParamsCtrlCommon changeAmp(final double factor) {
 		this.amp = amp.createChanged(factor);
+		return this;
+	}
+
+	public ParamsCtrlCommon put(final String key, final Object value) {
+		universalParams.put(key, value);
 		return this;
 	}
 
@@ -31,8 +31,8 @@ public class ParamsCtrlCommon {
 	}
 
 	public String toApplyString() {
-		return amp.toApplyString() + pan.toApplyString()
-				+ universalParams.stream().map(param -> param.toApplyString()).collect(Collectors.joining());
+		return amp.toApplyString() + pan.toApplyString() + universalParams.keySet().stream()
+				.map(key -> Params.toApplyString(key, universalParams.get(key))).collect(Collectors.joining());
 	}
 
 	public ParamsCtrlCommon togglePan() {

@@ -7,6 +7,7 @@ import klaus31.music.PlayerSonicPi;
 import klaus31.music.SonglineList;
 import klaus31.music.command.UseBpm;
 import klaus31.music.demo.bridge.Bridge;
+import klaus31.music.demo.chorus.Chorus;
 import klaus31.music.demo.solo.Solo;
 import klaus31.music.demo.verse.Verse;
 import klaus31.music.theme.Song;
@@ -24,6 +25,8 @@ public class SongDemo implements Song {
 	private final Theme verse2 = new Verse();
 	private final Theme verse3 = new Verse();
 	private final Theme bridge = new Bridge();
+	private final Theme chorus1 = new Chorus();
+	private final Theme chorus2 = new Chorus();
 	private final Theme solo = new Solo();
 
 	@Override
@@ -35,8 +38,10 @@ public class SongDemo implements Song {
 	public SonglineList getSonglines() {
 		final SonglineList songlines = new SonglineList();
 		songlines.add(verse1);
+		// songlines.add(chorus2); // FIXME not playing on my bot :(
 		songlines.add(bridge);
 		songlines.add(verse2);
+		// songlines.add(chorus2); // FIXME not playing on my bot :(
 		songlines.add(solo);
 		songlines.add(verse3);
 		return songlines;

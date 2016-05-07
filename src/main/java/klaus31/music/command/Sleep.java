@@ -2,6 +2,10 @@ package klaus31.music.command;
 
 import klaus31.music.Songline;
 
+/**
+ * @author smart
+ *
+ */
 public class Sleep implements Command {
 
 	public static final Sleep QUARTER_BEAT = new Sleep(1D / 4D);
@@ -25,4 +29,8 @@ public class Sleep implements Command {
 		return Songline.create(String.format("sleep %s", beats));
 	}
 
+	@Override
+	public String toString() {
+		return "Sleep [beats=" + beats + "]";
+	}
 }

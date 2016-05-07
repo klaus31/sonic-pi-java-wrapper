@@ -3,7 +3,6 @@ package klaus31.music.demo.solo;
 import klaus31.music.SonglineList;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
-import klaus31.music.command.params.UniversalParam;
 import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.PredefinedSample;
 import klaus31.music.demo.music.Times;
@@ -21,9 +20,9 @@ public class Drum implements Theme {
 		final PlaySample cynbalOpen = new PlaySample(PredefinedSample.DRUM_CYMBAL_OPEN);
 		final PlaySample roll = new PlaySample(PredefinedSample.DRUM_ROLL);
 		roll.getCtrl() // @formatter:off
-				.add(new UniversalParam("finish", 0.3)) 
-				.add(new UniversalParam("release", 0.5))
-				.add(new UniversalParam("attack", 0.2)); // @formatter:on
+				.put("finish", 0.3) 
+				.put("release", 0.5)
+				.put("attack", 0.2); // @formatter:on
 
 		Times.loop(3, i -> {
 			songlines.add(snare);
