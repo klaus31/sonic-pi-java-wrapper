@@ -2,25 +2,32 @@ package klaus31.music.command.sample;
 
 import klaus31.music.command.Command;
 import klaus31.music.command.params.Pan;
-import klaus31.music.command.params.SampleParamsCtrl;
+import klaus31.music.command.params.ParamsCtrl;
 
 public class PlaySample implements Command {
 
-	private final SampleParamsCtrl ctrl;
-	private Sample sample;
+	private final ParamsCtrl ctrl;
+	private final Sample sample;
 
 	public PlaySample(final Sample sample) {
-		this(sample, SampleParamsCtrl.createDefault());
+		this(sample, ParamsCtrl.createDefault());
 	}
 
-	public PlaySample(final Sample sample, final SampleParamsCtrl ctrl) {
+	public PlaySample(final Sample sample, final ParamsCtrl ctrl) {
 		this.sample = sample;
 		this.ctrl = ctrl;
 	}
 
-	public PlaySample changeAmp(final double factor) {
-		ctrl.changeAmp(factor);
-		return this;
+	public PlaySample createCopy(final Pan newPan) {
+		return new PlaySample(sample, ctrl.createWithChangedPan(newPan));
+	}
+
+	public PlaySample createCopyWithChangedAmp(final double factor) {
+		return new PlaySample(sample, ctrl.createWithChangedAmp(factor));
+	}
+
+	public PlaySample createCopyWithSample(final Sample sample) {
+		return new PlaySample(sample, ctrl);
 	}
 
 	@Override
@@ -30,20 +37,5 @@ public class PlaySample implements Command {
 
 	public Sample getSample() {
 		return sample;
-	}
-
-	public PlaySample mute() {
-		ctrl.mute();
-		return this;
-	}
-
-	public PlaySample setPan(final Pan newPan) {
-		ctrl.setPan(newPan);
-		return this;
-	}
-
-	public PlaySample setSample(final Sample sample) {
-		this.sample = sample;
-		return this;
 	}
 }

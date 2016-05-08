@@ -1,12 +1,11 @@
 package klaus31.music.command.synth;
 
 import klaus31.music.command.Command;
-import klaus31.music.command.params.ParamsCtrlCommon;
-import klaus31.music.command.params.PlayParamsCtrl;
+import klaus31.music.command.params.ParamsCtrl;
 
 public class PlaySynth implements Command {
 
-	private ParamsCtrlCommon ctrl;
+	private ParamsCtrl ctrl;
 	private String note;
 	private PredefinedSynth synth;
 
@@ -15,15 +14,15 @@ public class PlaySynth implements Command {
 	}
 
 	public PlaySynth(final String note) {
-		this(note, PlayParamsCtrl.createDefault());
+		this(note, ParamsCtrl.createDefault());
 	}
 
-	public PlaySynth(final String note, final ParamsCtrlCommon ctrl) {
+	public PlaySynth(final String note, final ParamsCtrl ctrl) {
 		this(note, ctrl, PredefinedSynth.DEFAULT);
 
 	}
 
-	public PlaySynth(final String note, final ParamsCtrlCommon ctrl, final PredefinedSynth synth) {
+	public PlaySynth(final String note, final ParamsCtrl ctrl, final PredefinedSynth synth) {
 		this.note = note;
 		this.ctrl = ctrl;
 		this.synth = synth;
@@ -34,11 +33,11 @@ public class PlaySynth implements Command {
 		return String.format("use_synth %s%nplay %s%s", synth.getName(), note, ctrl.toApplyString());
 	}
 
-	public ParamsCtrlCommon getCtrl() {
+	public ParamsCtrl getCtrl() {
 		return ctrl;
 	}
 
-	public PlaySynth setCtrl(final ParamsCtrlCommon ctrl) {
+	public PlaySynth setCtrl(final ParamsCtrl ctrl) {
 		this.ctrl = ctrl;
 		return this;
 	}

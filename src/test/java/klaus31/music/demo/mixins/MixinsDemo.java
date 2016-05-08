@@ -39,7 +39,7 @@ public class MixinsDemo extends Song {
 		this.mixin((songline, theme, sizeOfOutputLines) -> {
 			if (songline instanceof PlaySample) {
 				final PlaySample sample = (PlaySample) songline;
-				sample.setPan(Pan.LEFT).changeAmp(0.9);
+				songline = sample.createCopy(Pan.LEFT).createCopyWithChangedAmp(0.9);
 			}
 			return Optional.empty();
 		});
@@ -48,7 +48,7 @@ public class MixinsDemo extends Song {
 		this.mixin((songline, theme, sizeOfOutputLines) -> {
 			if (sizeOfOutputLines % 5 == 0) {
 				final PlaySynth playSynth = new PlaySynth(60);
-				playSynth.getCtrl().changeAmp(0.3);
+				playSynth.getCtrl().createWithChangedAmp(0.3);
 				return Optional.of(asList(playSynth));
 			} else {
 				return Optional.empty();
@@ -60,15 +60,14 @@ public class MixinsDemo extends Song {
 			private int count = 0;
 
 			@Override
-			public Optional<List<Command>> update(final Command songline, final Theme theme,
-					final int sizeOfOutputLines) {
+			public Optional<List<Command>> update(Command songline, final Theme theme, final int sizeOfOutputLines) {
 				if (songline instanceof PlaySample) {
 					count++;
 					if (count % 3 == 0) {
 						final PlaySample newSample = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
-						newSample.changeAmp(1);
+						newSample.createCopyWithChangedAmp(1);
 						final PlaySample originalSample = (PlaySample) songline;
-						originalSample.mute();
+						songline = originalSample.createCopyWithChangedAmp(0);
 						return Optional.of(asList(newSample));
 					}
 				}

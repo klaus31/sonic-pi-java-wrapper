@@ -27,7 +27,7 @@ class HiHatBaseTheme extends Theme {
 	}
 
 	public void setSample(final Sample sample) {
-		this.playCommand.setSample(sample);
+		this.playCommand.createCopyWithSample(sample);
 	}
 
 }

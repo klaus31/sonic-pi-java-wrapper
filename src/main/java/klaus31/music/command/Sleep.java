@@ -12,6 +12,7 @@ public class Sleep implements Command {
 	public static final Sleep ONE_BEAT = new Sleep(1);
 	public static final Sleep HALF_BEAT = new Sleep(1D / 2D);
 	public static final Sleep QUARTER_BEAT = new Sleep(1D / 4D);
+	public static final Sleep QUARTER_TRIOLA = new Sleep(1D / 6D);
 	public static final Sleep FOURTH_BEAT = QUARTER_BEAT;
 	public static final Sleep EIGHTH_BEAT = new Sleep(1D / 8D);
 	public static final Sleep SIXTEENTH_BEAT = new Sleep(1D / 18D);

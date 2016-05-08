@@ -2,13 +2,13 @@ package klaus31.music.command.synth;
 
 import static klaus31.music.Rubyalizer.colonize;
 
-import klaus31.music.command.params.PlayParamsCtrl;
+import klaus31.music.command.params.ParamsCtrl;
 
 public class PlayNoteFactory {
 	private final String tonic, name;
-	private final PlayParamsCtrl ctrl;
+	private final ParamsCtrl ctrl;
 
-	public PlayNoteFactory(final String tonic, final String name, final PlayParamsCtrl ctrl) {
+	public PlayNoteFactory(final String tonic, final String name, final ParamsCtrl ctrl) {
 		this.tonic = colonize(tonic);
 		this.name = colonize(name);
 		this.ctrl = ctrl;
@@ -23,7 +23,8 @@ public class PlayNoteFactory {
 	}
 
 	public PlaySynth createPlayChord(final int number, final String name) {
-		return new PlaySynth(String.format("chord(scale(%s, %s)[%d], %s)", tonic, name, number % 9, colonize(name)), ctrl);
+		return new PlaySynth(String.format("chord(scale(%s, %s)[%d], %s)", tonic, name, number % 9, colonize(name)),
+				ctrl);
 	}
 
 }
