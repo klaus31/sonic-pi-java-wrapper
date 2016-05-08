@@ -1,4 +1,4 @@
-package klaus31.music.demo.sounds;
+package klaus31.music.demo.mixins;
 
 import static java.util.Arrays.asList;
 import static klaus31.music.command.sample.PredefinedSample.DRUM_CYMBAL_PEDAL;
@@ -16,20 +16,19 @@ import klaus31.music.command.params.Pan;
 import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.PredefinedSample;
 import klaus31.music.command.synth.PlaySynth;
-import klaus31.music.demo.sounds.drums.hihat.HiHatBaseTheme;
 import klaus31.music.theme.Song;
 import klaus31.music.theme.SongListener;
 import klaus31.music.theme.Theme;
 
-public class SoundsDemo extends Song {
+public class MixinsDemo extends Song {
 
 	public static void main(final String... args) throws IOException {
-		final Song song = new SoundsDemo();
-		final Player player = new PlayerSonicPi().activateDebugging();
+		final Song song = new MixinsDemo();
+		final Player player = new PlayerSonicPi();
 		player.play(song);
 	}
 
-	public SoundsDemo() {
+	public MixinsDemo() {
 
 		add(new HiHatBaseTheme());
 		add(new HiHatBaseTheme(16, DRUM_CYMBAL_PEDAL, Sleep.EIGHTH_BEAT));

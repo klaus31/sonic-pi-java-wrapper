@@ -1,4 +1,4 @@
-package klaus31.music.demo.sounds.drums.hihat;
+package klaus31.music.demo.mixins;
 
 import static klaus31.music.command.sample.PredefinedSample.DRUM_CYMBAL_CLOSED;
 
@@ -7,7 +7,7 @@ import klaus31.music.command.sample.PlaySample;
 import klaus31.music.command.sample.Sample;
 import klaus31.music.theme.Theme;
 
-public class HiHatBaseTheme extends Theme implements HiHat {
+class HiHatBaseTheme extends Theme {
 
 	private final PlaySample playCommand;
 

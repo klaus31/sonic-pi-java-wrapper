@@ -1,12 +1,12 @@
 package klaus31.music.theme;
 
+import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
-import klaus31.music.command.sample.PlaySample;
 
 /**
  * a theme or in other words "something, that can be played"
  */
-public abstract class Theme {
+public class Theme {
 
 	private final boolean runsInThread = false;
 
@@ -16,12 +16,12 @@ public abstract class Theme {
 		songlines = new Songlines();
 	}
 
-	protected void add(final PlaySample command) {
-		songlines.add(command);
-	}
-
-	protected void add(final Sleep sleep) {
-		songlines.add(sleep);
+	protected void add(final Command command) {
+		if (command instanceof Sleep) {
+			songlines.add((Sleep) command);
+		} else {
+			songlines.add(command);
+		}
 	}
 
 	Songlines getSonglines() {
