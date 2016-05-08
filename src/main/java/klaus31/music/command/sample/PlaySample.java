@@ -2,18 +2,18 @@ package klaus31.music.command.sample;
 
 import klaus31.music.command.Command;
 import klaus31.music.command.params.Pan;
-import klaus31.music.command.params.ParamsCtrl;
+import klaus31.music.command.params.PlayParams;
 
 public class PlaySample implements Command {
 
-	private final ParamsCtrl ctrl;
+	private final PlayParams ctrl;
 	private final Sample sample;
 
 	public PlaySample(final Sample sample) {
-		this(sample, ParamsCtrl.createDefault());
+		this(sample, PlayParams.createDefault());
 	}
 
-	public PlaySample(final Sample sample, final ParamsCtrl ctrl) {
+	public PlaySample(final Sample sample, final PlayParams ctrl) {
 		this.sample = sample;
 		this.ctrl = ctrl;
 	}

@@ -1,7 +1,10 @@
 package klaus31.music.theme;
 
+import static klaus31.music.Rubyalizer.colonize;
+
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
+import klaus31.music.command.params.UniversalParams;
 
 /**
  * a theme or in other words "something, that can be played"
@@ -51,6 +54,14 @@ public class Theme {
 	protected void wrap(final String firstLine, final String lastLine) {
 		songlines.add(0, () -> firstLine);
 		songlines.add(() -> lastLine);
+	}
+
+	public void wrapFx(final String name) {
+		wrap(String.format("with_fx %s do", colonize(name)));
+	}
+
+	public void wrapFx(final String name, final UniversalParams params) {
+		wrap(String.format("with_fx %s%s do", colonize(name), params.toApplyString()));
 	}
 
 }

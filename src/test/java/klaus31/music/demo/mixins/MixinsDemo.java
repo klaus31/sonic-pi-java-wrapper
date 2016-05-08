@@ -48,8 +48,7 @@ public class MixinsDemo extends Song {
 		this.mixin((songline, theme, sizeOfOutputLines) -> {
 			if (sizeOfOutputLines % 5 == 0) {
 				final PlaySynth playSynth = new PlaySynth(60);
-				playSynth.getCtrl().createWithChangedAmp(0.3);
-				return Optional.of(asList(playSynth));
+				return Optional.of(asList(playSynth.createCopyWithChangedAmp(0.3)));
 			} else {
 				return Optional.empty();
 			}
