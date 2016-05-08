@@ -9,16 +9,22 @@ public enum TimeSignature {
 		// TODO method and other cases
 		switch (this) {
 		case FOUR_FOUR_TIME:
-			int result = 0;
-			double length = 0;
-			while (length < 4) {
-				length += sleep.getBeats();
-				result++;
-			}
-			return result;
+			return split(sleep, 4);
+		case THREE_FOUR_TIME:
+			return split(sleep, 3);
 		default:
 			break;
 		}
 		return 0;
+	}
+
+	private int split(final Sleep sleep, final int until) {
+		int result = 0;
+		double length = sleep.getBeats();
+		while (length < until) {
+			length += sleep.getBeats();
+			result++;
+		}
+		return result;
 	}
 }
