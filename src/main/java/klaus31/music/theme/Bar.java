@@ -9,16 +9,13 @@ import org.apache.commons.lang3.Validate;
 import klaus31.music.command.Command;
 import klaus31.music.command.Sleep;
 
-/**
- * ♩ ♪ ♫ ♬ ♭ ♮ ♯
- */
 public class Bar {
 
 	private final List<Command> commands;
 
-	public Bar(final TimeSignature timeSignature, final Sleep sleep, final Function<Integer, List<Command>> action) {
+	public Bar(final Sleep sleep, final Function<Integer, List<Command>> action, final int beats) {
 		this.commands = new ArrayList<>();
-		final int times = timeSignature.split(sleep);
+		final int times = split(sleep, beats);
 		int i = 0;
 		do {
 			Validate.isTrue(action.apply(i).stream().noneMatch(Sleep.class::isInstance),
@@ -30,6 +27,16 @@ public class Bar {
 
 	public List<Command> getCommands() {
 		return commands;
+	}
+
+	private int split(final Sleep sleep, final int beats) {
+		int result = 0;
+		double length = sleep.getBeats() + sleep.getBeats() / 2;
+		while (length < Sleep.ONE_BEAT.getBeats() * beats) {
+			length += sleep.getBeats();
+			result++;
+		}
+		return result;
 	}
 
 }

@@ -15,10 +15,10 @@ public class BarBuilder {
 
 	private Function<Integer, List<Command>> action;
 	private Sleep sleep;
-	private TimeSignature timeSignature;
+	private int beats;
 
 	private BarBuilder() {
-		timeSignature = TimeSignature.FOUR_FOUR_TIME;
+		beats = 1;
 		sleep = Sleep.ONE_BEAT;
 		action = (i) -> {
 			return new ArrayList<>();
@@ -30,18 +30,17 @@ public class BarBuilder {
 		return this;
 	}
 
+	public BarBuilder beats(final int beats) {
+		this.beats = beats;
+		return this;
+	}
+
 	public Bar build() {
-		return new Bar(timeSignature, sleep, action);
+		return new Bar(sleep, action, beats);
 	}
 
 	public BarBuilder sleep(final Sleep sleep) {
 		this.sleep = sleep;
 		return this;
 	}
-
-	public BarBuilder timeSignature(final TimeSignature timeSignature) {
-		this.timeSignature = timeSignature;
-		return this;
-	}
-
 }
