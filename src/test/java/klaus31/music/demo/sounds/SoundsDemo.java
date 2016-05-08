@@ -40,7 +40,7 @@ public class SoundsDemo extends Song {
 		this.mixin((songline, theme, sizeOfOutputLines) -> {
 			if (songline instanceof PlaySample) {
 				final PlaySample sample = (PlaySample) songline;
-				sample.getCtrl().setPan(Pan.LEFT).changeAmp(0.9);
+				sample.setPan(Pan.LEFT).changeAmp(0.9);
 			}
 			return Optional.empty();
 		});
@@ -67,12 +67,10 @@ public class SoundsDemo extends Song {
 					count++;
 					if (count % 3 == 0) {
 						final PlaySample newSample = new PlaySample(PredefinedSample.DRUM_BASS_SOFT);
-						newSample.getCtrl().changeAmp(1);
+						newSample.changeAmp(1);
 						final PlaySample originalSample = (PlaySample) songline;
 						originalSample.mute();
 						return Optional.of(asList(newSample));
-						// System.out.println("asdfasdfasdf");
-						// hihat.setSample(DRUM_BASS_SOFT);
 					}
 				}
 				return Optional.empty();

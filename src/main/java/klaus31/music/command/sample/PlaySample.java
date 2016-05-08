@@ -1,6 +1,7 @@
 package klaus31.music.command.sample;
 
 import klaus31.music.command.Command;
+import klaus31.music.command.params.Pan;
 import klaus31.music.command.params.SampleParamsCtrl;
 
 public class PlaySample implements Command {
@@ -17,25 +18,32 @@ public class PlaySample implements Command {
 		this.ctrl = ctrl;
 	}
 
+	public PlaySample changeAmp(final double factor) {
+		ctrl.changeAmp(factor);
+		return this;
+	}
+
 	@Override
 	public String format() {
 		return "sample " + sample.getName() + ctrl.toApplyString();
-	}
-
-	public SampleParamsCtrl getCtrl() {
-		return ctrl;
 	}
 
 	public Sample getSample() {
 		return sample;
 	}
 
-	public void mute() {
-		getCtrl().mute();
-
+	public PlaySample mute() {
+		ctrl.mute();
+		return this;
 	}
 
-	public void setSample(final Sample sample) {
+	public PlaySample setPan(final Pan newPan) {
+		ctrl.setPan(newPan);
+		return this;
+	}
+
+	public PlaySample setSample(final Sample sample) {
 		this.sample = sample;
+		return this;
 	}
 }
