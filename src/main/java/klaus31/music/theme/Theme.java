@@ -24,6 +24,10 @@ public class Theme {
 		}
 	}
 
+	protected void add(final Theme theme) {
+		theme.getSonglines().forEach(this::add);
+	}
+
 	Songlines getSonglines() {
 		return songlines;
 	}
